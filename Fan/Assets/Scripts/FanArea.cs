@@ -10,9 +10,7 @@ public class FanArea : MonoBehaviour
 
     private bool inFanArea = false;
     private GameObject AirFlow;
- 
-
-    private Rigidbody2D rb;
+    protected Rigidbody2D rb;
 
     private void Start()
     {
@@ -21,25 +19,33 @@ public class FanArea : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
-        transform.localScale =new Vector3(size.x* strength , size.y,size.z);
+        transform.localScale = new Vector3(size.x * strength, size.y, size.z);
 
         if (inFanArea)
         {
-            rb.AddForce(direction*strength);
+            moveObject(rb,direction,strength);
         }
     }
 
     void OnTriggerEnter2D(Collider2D coll)
-    {       
-        if(coll.gameObject.GetComponent<Rigidbody2D>() == true)
+    {
+        if (coll.gameObject.GetComponent<Rigidbody2D>() == true)
         {
-            rb = coll.GetComponent<Rigidbody2D>();
+            rb = coll.gameObject.GetComponent<Rigidbody2D>();
             inFanArea = true;
-        }          
+        }
     }
 
     void OnTriggerExit2D(Collider2D coll)
     {
-           inFanArea = false;
+        inFanArea = false;
     }
+
+
+    public static void moveObject(Rigidbody2D t_rb, Vector3 t_direction, float t_strength)
+    {
+        t_rb.AddForce(t_direction * t_strength);
+    }
+
 }
+

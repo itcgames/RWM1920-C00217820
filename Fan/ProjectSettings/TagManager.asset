@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - FanAOE
+  - Fan
+  - TestCube
+  - Ground
   layers:
   - Default
   - TransparentFX
