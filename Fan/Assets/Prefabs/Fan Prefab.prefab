@@ -334,6 +334,7 @@ MonoBehaviour:
   strength: 5
   direction: {x: 1, y: 0, z: 0}
   size: {x: 1, y: 1, z: 0}
+  m_MyAudioSource: {fileID: 449228725521101957}
 --- !u!82 &449228725521101957
 AudioSource:
   m_ObjectHideFlags: 0
@@ -344,19 +345,19 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 557621429434bf5419304cc1cd9a0aab, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.095
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 60
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.39
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -420,7 +421,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.552
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5245,15 +5246,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b6850ad861632584ca95a3cbc3aa61c6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.126
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 65
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

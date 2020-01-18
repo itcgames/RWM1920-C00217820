@@ -12,8 +12,15 @@ public class FanArea : MonoBehaviour
     private GameObject AirFlow;
     protected Rigidbody2D rb;
 
+    public AudioSource m_MyAudioSource;
+    private float m_MySliderValue;
     private void Start()
     {
+             m_MySliderValue = strength/100;
+            m_MyAudioSource = GetComponent<AudioSource>();
+            m_MyAudioSource.volume = m_MySliderValue;
+            m_MyAudioSource.Play();
+        
     }
 
     // Update is called once per frame
