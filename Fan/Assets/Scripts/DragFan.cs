@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class DragFan : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private Vector3 m_Offset;
+    private float m_coordinates;
+
+    void OnMouseDown()
     {
-        
+        m_coordinates = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        m_Offset = gameObject.transform.position - GetMouseAsWorldPoint();
     }
 
-    // Update is called once per frame
-    void Update()
+    private Vector3 GetMouseAsWorldPoint()
     {
-        
+        Vector3 mousePoint = Input.mousePosition;
+        mousePoint.z = m_coordinates;
+        return Camera.main.ScreenToWorldPoint(mousePoint);
+    }
+
+    void OnMouseDrag()
+    {
+        transform.position = GetMouseAsWorldPoint() + m_Offset;
     }
 }
+

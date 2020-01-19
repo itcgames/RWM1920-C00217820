@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 603260075263998534}
   - component: {fileID: 603260075263998531}
   - component: {fileID: 603260075263998532}
+  - component: {fileID: 4503270276371042173}
   m_Layer: 0
   m_Name: Fan Prefab
   m_TagString: Untagged
@@ -131,6 +132,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4503270276371042173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603260075263998535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e5253f3e62cc4459ea56850f326d61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &603260075468395356
 GameObject:
   m_ObjectHideFlags: 0
